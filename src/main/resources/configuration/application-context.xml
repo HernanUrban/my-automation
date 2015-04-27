@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans   http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="propertiesUtil" class="com.test.automation.util.PropertiesUtil">
+		<property name="locations">
+			<list>
+				<value>classpath:environments/${env:dev}/application.properties
+				</value>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="driverProvider" class="com.test.automation.driver.DriverProvider">
+		<constructor-arg ref="propertiesUtil" />
+	</bean>
+
+</beans>
