@@ -1,4 +1,3 @@
 # my-automation  
-Automation framework based on Selenium, Cucumber and Spring.
-
+My-Automation is a testing tool framework based on Selenium, Cucumber and Spring.
 
